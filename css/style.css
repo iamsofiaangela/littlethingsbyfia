@@ -109,11 +109,12 @@ h1, h2, h3 {
   left: 0;
   transform: translateY(-50%);
   z-index: 1030;
-  background: var(--bar-bg);
+  background: var(--bar-bg, #1a1a1a); /* fallback */
   border-top-right-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
   overflow: hidden;
+  backdrop-filter: blur(6px); /* optional effect */
 }
 
 .sticky-social .social-link {
@@ -121,37 +122,46 @@ h1, h2, h3 {
   height: 52px;
   display: grid;
   place-items: center;
-  color: var(--icon-color);
+  color: var(--icon-color, #fff);
   text-decoration: none;
   transition: transform .15s ease, color .15s ease, background-color .15s ease;
+  position: relative; /* Needed for tooltip positioning */
 }
+
 .sticky-social .social-link:hover {
-  color: var(--icon-hover);
+  color: var(--icon-hover, #F84E77);
   background-color: rgba(255,255,255,.06);
   transform: translateX(2px);
 }
 
-/* Hover labels */
-.sticky-social .social-link[data-label]::after{
+/* Hover labels (tooltips) */
+.sticky-social .social-link[data-label]::after {
   content: attr(data-label);
   position: absolute;
   left: 56px;
   white-space: nowrap;
-  background: var(--bar-bg);
-  color: var(--icon-color);
+  background: var(--bar-bg, #1a1a1a);
+  color: var(--icon-color, #fff);
   padding: .25rem .5rem;
   border-radius: .5rem;
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity .15s ease, transform .15s ease;
   font-size: .85rem;
+  pointer-events: none;
   box-shadow: 0 6px 18px rgba(0,0,0,.15);
 }
-.sticky-social .social-link:hover::after { opacity: 1; transform: translateX(0); }
 
-/* Mobile bottom bar */
-@media (max-width: 576px){
-  .sticky-social{
+.sticky-social .social-link:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================
+   MOBILE BOTTOM BAR
+   ============================ */
+@media (max-width: 576px) {
+  .sticky-social {
     top: auto;
     bottom: 0;
     left: 0;
@@ -160,7 +170,13 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-around;
     border-radius: 0.75rem 0.75rem 0 0;
+    padding: 0.25rem 0;
   }
-  .sticky-social .social-link { flex: 1 1 auto; }
-  .sticky-social .social-link::after { display: none; }
+  .sticky-social .social-link {
+    flex: 1 1 auto;
+    transform: none !important; /* reset hover shift */
+  }
+  .sticky-social .social-link::after {
+    display: none; /* hide tooltips on mobile */
+  }
 }
