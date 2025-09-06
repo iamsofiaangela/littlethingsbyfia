@@ -61,8 +61,6 @@
   </div>
 </nav>
 
-<!-- Little Things Section -->
-<section id="littleThings" style="background-color:#FAF6E3;">
 <!-- Sticky Social Bar -->
 <nav class="sticky-social" aria-label="Social links">
   <!-- Facebook -->
@@ -250,8 +248,6 @@
     </div>
   </div>
 </section>
-  
-</section><!-- Little Things Section end -->
 
 <!-- FOOTER -->
 <footer class="bg-dark-gradient footer">
@@ -374,31 +370,6 @@
     const yearEl = document.getElementById("year");
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
-    }
-
-    // Get references for dynamic navbar
-    const navbar = document.getElementById('mainNavbar');
-    const brand = document.getElementById('navbarBrand');
-    const subtitle = document.getElementById('brandSubtitle');
-    const littleThingsSection = document.getElementById('littleThings');
-
-    if (navbar && brand && subtitle && littleThingsSection) {
-      window.addEventListener('scroll', () => {
-        const scrollPos = window.scrollY;
-        const sectionTop = littleThingsSection.offsetTop - navbar.offsetHeight;
-
-        if (scrollPos >= sectionTop) {
-          // User scrolled into Little Things section
-          navbar.style.backgroundColor = "#FAF6E3";   // lighter color
-          brand.style.color = "#2A3663";             // dark text
-          subtitle.style.color = "#B59F78";          // accent
-        } else {
-          // Revert to default portfolio style
-          navbar.style.backgroundColor = "#2A3663";
-          brand.style.color = "#FAF6E3";
-          subtitle.style.color = "#B59F78";
-        }
-      });
     }
   });
 </script>
