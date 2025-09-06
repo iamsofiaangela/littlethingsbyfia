@@ -1,3 +1,85 @@
+:root {
+  /* 🌈 Customizable theme colors */
+  --primary-color: #102E50;     /* Navy */
+  --accent-color: #B59F78;      /* Warm beige */
+  --text-color: #333;           /* Base text color */
+  --background-color: #FAF6E3;  /* Light cream */
+  --hover-color: #B59F78;       /* Deep gold for hover */
+  --bar-bg: #B59F78;       /* Deep gold */
+  --bar-accent: #102E50;     /* Navy */
+  --icon-color: #ffffff;
+  --icon-hover: var(--bar-accent);
+}
+
+body {
+  /* 🖋 Base typography and background */
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  /* 🎨 Headings get a serif font for contrast */
+  font-family: 'Playfair Display', serif;
+}
+
+/* 💬 Navbar links */
+.navbar {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-brand span:first-child {
+  color: var(--background-color);
+  font-weight: 700;
+}
+
+.navbar-brand span:last-child {
+  color: var(--accent-color);
+}
+
+/* 🔘 Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+}
+
+.btn-secondary {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-ghost {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+
+/* 💬 Navbar links */
+.nav-custom {
+  color: var(--background-color) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-custom:hover {
+  color: var(--hover-color) !important;
+}
+
+.contact-btn {
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--background-color);
+}
+
+/* 📌 Spacing for key sections */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
