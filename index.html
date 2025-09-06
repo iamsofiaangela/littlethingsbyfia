@@ -18,12 +18,11 @@
 
 <body>
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #2A3663;">
+<nav id="mainNavbar" class="navbar navbar-expand-lg sticky-top" style="background-color: #2A3663; transition: 0.4s;">
   <div class="container">
     <!-- Brand -->
-    <a class="navbar-brand fw-bold" href="#home" style="color:#FAF6E3;">
-      Sofia Angela 
-      <span style="color:#B59F78;">| Portfolio</span>
+    <a id="navbarBrand" class="navbar-brand fw-bold" href="#home" style="color:#FAF6E3; transition: 0.4s;">
+      Sofia Angela <span id="brandSubtitle" style="color:#B59F78;">| Portfolio</span>
     </a>
 
     <!-- Mobile Toggle Button -->
@@ -35,14 +34,12 @@
     <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <!-- Portfolio Sections -->
         <li class="nav-item"><a class="nav-link nav-custom" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link nav-custom" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link nav-custom" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link nav-custom" href="#about">About</a></li>
 
-        <!-- Little Things by Fia Sections -->
+        <!-- Little Things Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle nav-custom" href="#" id="littleThingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Little Things by Fia
@@ -62,6 +59,11 @@
     </div>
   </div>
 </nav>
+
+<!-- Example Little Things Section -->
+<section id="littleThings" style="height:800px; background-color:#FAF6E3;">
+  <h2 class="text-center pt-5">Little Things by Fia Section</h2>
+</section>
 
   <!-- Sticky Social Bar -->
 <nav class="sticky-social" aria-label="Social links">
@@ -212,18 +214,38 @@
 </footer>
 
 <script>
-  // Auto-update year
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', () => {
+    // Auto-update year
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
-  // Mobile nav toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!open));
-    nav.classList.toggle('open');
+    // Get references for dynamic navbar
+    const navbar = document.getElementById('mainNavbar');
+    const brand = document.getElementById('navbarBrand');
+    const subtitle = document.getElementById('brandSubtitle');
+    const littleThingsSection = document.getElementById('littleThings');
+
+    if (navbar && brand && subtitle && littleThingsSection) {
+      window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY;
+        const sectionTop = littleThingsSection.offsetTop - navbar.offsetHeight;
+
+        if (scrollPos >= sectionTop) {
+          // User scrolled into Little Things section
+          navbar.style.backgroundColor = "#FAF6E3";   // lighter color
+          brand.style.color = "#2A3663";             // dark text
+          subtitle.style.color = "#B59F78";          // accent
+        } else {
+          // Revert to default portfolio style
+          navbar.style.backgroundColor = "#2A3663";
+          brand.style.color = "#FAF6E3";
+          subtitle.style.color = "#B59F78";
+        }
+      });
+    }
   });
-  
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
