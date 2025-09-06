@@ -4,566 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sofia Angela | Portfolio</title>
-
-  <!-- Custom CSS -->
+  <!-- Custom CSS (for colors and layout overrides) -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/question.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/contact.css" />
-
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">  
+ <!-- fontawesome -->
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 
 <body>
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #2A3663;">
   <div class="container">
     <!-- Brand -->
-    <a class="navbar-brand fw-bold" href="#home" style="color: #FAF6E3;">
-      Sofia Angela <span style="color: #B59F78;">| Portfolio</span>
+    <a class="navbar-brand fw-bold" href="#home" style="color:#FAF6E3;">
+      Sofia Angela <span style="color:#B59F78;">| Portfolio</span>
     </a>
 
+    
     <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
+    <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
       aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: #FAF6E3;"></span>
+      <!-- Custom icon (so it’s visible on dark background) -->
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-        <li class="nav-item"><a class="nav-link text-light mx-lg-2 py-2" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-light mx-lg-2 py-2" href="#bundles">Bundles</a></li>
-        <li class="nav-item"><a class="nav-link text-light mx-lg-2 py-2" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link text-light mx-lg-2 py-2" href="#testimonials">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link text-light mx-lg-2 py-2" href="#about">About</a></li>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link nav-custom" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom" href="#bundles">Bundles</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom" href="#testimonials">Testimonials</a></li>
+        <!-- <li class="nav-item"><a class="nav-link nav-custom" href="#services">Services</a></li> -->
+        <li class="nav-item"><a class="nav-link nav-custom" href="#about">About</a></li>
+
+        <!-- CTA Contact Button -->
         <li class="nav-item">
-          <a class="btn ms-lg-3 mt-2 mt-lg-0 px-4 py-2" href="#contact" 
-             style="background-color: #F5C45E; color: #102E50; border: none; font-weight: 600;">
-            Contact
-          </a>
+          <a class="btn contact-btn ms-2" style="background-color:#F5C45E; color:#102E50; border:none; font-weight:600;" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Sticky Social Bar -->
+  <!-- Sticky Social Bar -->
 <nav class="sticky-social" aria-label="Social links">
-  <a class="social-link" href="https://facebook.com/littlethingsbyfia" target="_blank" rel="noopener" aria-label="Facebook">
+  <!-- Facebook -->
+  <a class="social-link" href="https://facebook.com/littlethingsbyfia" target="_blank" rel="noopener"
+     aria-label="Facebook" data-label="Facebook">
     <i class="fa-brands fa-facebook"></i>
   </a>
-  <a class="social-link" href="https://instagram.com/littlethingsbyfia" target="_blank" rel="noopener" aria-label="Instagram">
+
+  <!-- Instagram -->
+  <a class="social-link" href="https://instagram.com/littlethingsbyfia" target="_blank" rel="noopener"
+     aria-label="Instagram" data-label="Instagram">
     <i class="fa-brands fa-instagram"></i>
   </a>
-  <a class="social-link" href="https://tiktok.com/@littlethingsbyfia" target="_blank" rel="noopener" aria-label="TikTok">
+
+  <!-- TikTok -->
+  <a class="social-link" href="https://tiktok.com/@littlethingsbyfia" target="_blank" rel="noopener"
+     aria-label="TikTok" data-label="TikTok">
     <i class="fa-brands fa-tiktok"></i>
   </a>
-  <a class="social-link" href="https://m.me/littlethingsbyfia" target="_blank" rel="noopener" aria-label="Messenger">
+
+  <!-- Messenger -->
+  <a class="social-link" href="https://m.me/littlethingsbyfia" target="_blank" rel="noopener"
+     aria-label="Messenger" data-label="Messenger">
     <i class="fa-brands fa-facebook-messenger"></i>
   </a>
-  <a class="social-link" href="https://github.com/iamsofiaangela" target="_blank" rel="noopener" aria-label="GitHub">
+
+    <!-- github -->
+  <a class="social-link" href="https://github.com/iamsofiaangela" target="_blank" rel="noopener"
+     aria-label="Messenger" data-label="Messenger">
     <i class="fa-brands fa-github"></i>
   </a>
 </nav>
 
-<!-- Hero / Landing -->
-<section class="hero d-flex align-items-center text-center text-white" id="home">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h1 class="display-3 fw-bold">Little Things by Fia</h1>
-        <p class="lead mb-4">Digital Creativity • Filipino-Inspired • Affordable Excellence</p>
-        <div class="d-flex justify-content-center gap-3">
-          <a href="#bundles" class="btn btn-primary btn-lg">Explore Products</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg">Work With Me</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Featured Products / Shop -->
-  
-<!-- Bundle Section (Creative Showcase) -->
-<section id="bundles" class="section bundles-section py-5" 
-         style="background: url('assets/shell royal blue.png') no-repeat center center/cover; position: relative;">
-
-  <div style="padding: 3rem 0;">
-    <div class="container">
-      <h2 class="text-center mb-4" style="color: #ffffff;">Creative Bundles by Little Things by Fia</h2>
-      <p class="text-center mb-5" style="color: #ffffff;"> Designed for small businesses, freelancers, and dreamers — bundles that give you <em>clarity, style, and systems</em> without the overwhelm.</p>
-      <div class="row g-4">
-
-        <!-- Bundle 1: Starter -->
-        <div class="col-md-6 col-lg-3">
-          <div class="bundle-card shadow p-3 rounded h-100 text-center bg-white">
-            <!-- <img src="assets/mockup-starter.png" alt="Starter Bundle" class="img-fluid rounded mb-3">-->
-            <h3 class="h5">Starter Bundle</h3>
-            <p class="bundle-desc">Kickstart your brand identity with clean, simple essentials.</p>
-            <a href="#contact" class="btn btn-primary btn-sm mt-2">Get This Bundle</a>
-            <button class="btn btn-outline-secondary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#starterModal">More Info</button>
-          </div>
-        </div>
-
-        <!-- Bundle 2: Growth -->
-        <div class="col-md-6 col-lg-3">
-          <div class="bundle-card shadow p-3 rounded h-100 text-center bg-white">
-           <!-- <img src="assets/mockup-starter.png" alt="Starter Bundle" class="img-fluid rounded mb-3">-->
-            <h3 class="h5">Growth Bundle</h3>
-            <p class="bundle-desc">Perfect for small biz owners ready to grow online.</p>
-            <a href="#contact" class="btn btn-primary btn-sm mt-2">Get This Bundle</a>
-            <button class="btn btn-outline-secondary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#growthModal">More Info</button>
-          </div>
-        </div>
-
-        <!-- Bundle 3: Creative Pro -->
-        <div class="col-md-6 col-lg-3">
-          <div class="bundle-card shadow p-3 rounded h-100 text-center bg-white">
-            <!-- <img src="assets/mockup-starter.png" alt="Starter Bundle" class="img-fluid rounded mb-3">-->
-            <h3 class="h5">Creative Pro Bundle</h3>
-            <p class="bundle-desc">For entrepreneurs who want polished, consistent branding.</p>
-            <a href="#contact" class="btn btn-primary btn-sm mt-2">Get This Bundle</a>
-            <button class="btn btn-outline-secondary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#proModal">More Info</button>
-          </div>
-        </div>
-
-        <!-- Bundle 4: Ultimate -->
-        <div class="col-md-6 col-lg-3">
-          <div class="bundle-card shadow p-3 rounded h-100 text-center bg-white">
-            <!-- <img src="assets/mockup-starter.png" alt="Starter Bundle" class="img-fluid rounded mb-3">-->
-            <h3 class="h5">Ultimate Bundle</h3>
-            <p class="bundle-desc">The all-in-one package for businesses ready to scale.</p>
-            <a href="#contact" class="btn btn-primary btn-sm mt-2">Get This Bundle</a>
-            <button class="btn btn-outline-secondary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#ultimateModal">More Info</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= MODALS ========================= -->
-
-<!-- Starter Modal -->
-<div class="modal fade" id="starterModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
-      <div class="modal-header">
-        <h5 class="modal-title">Starter Bundle – Brand Basics</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body small">
-        <h6>Services:</h6>
-        <ul>
-          <li>✔ Basic Logo Design (1 concept + 1 revision)</li>
-          <li>✔ Simple Brand Color Palette & Font Guide</li>
-          <li>✔ 5 Editable Social Media Templates</li>
-        </ul>
-        <h6>Freebie:</h6>
-        <ul>
-          <li>🎁 1 Printable Journal / Notepad (digital copy)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Growth Modal -->
-<div class="modal fade" id="growthModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
-      <div class="modal-header">
-        <h5 class="modal-title">Growth Bundle – Social Media Ready</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body small">
-        <h6>Services:</h6>
-        <ul>
-          <li>✔ Logo Design + Mini Brand Kit (logo, palette, fonts)</li>
-          <li>✔ 10 Editable Social Media Templates</li>
-          <li>✔ 1 Facebook Page Branding (cover + profile frame)</li>
-          <li>✔ 1 Infographic / Carousel Post</li>
-        </ul>
-        <h6>Freebies:</h6>
-        <ul>
-          <li>🎁 1 E-book (Quick Branding Tips or Social Media Starter Guide)</li>
-          <li>🎁 1 Printable Notebook / Journal</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Pro Modal -->
-<div class="modal fade" id="proModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
-      <div class="modal-header">
-        <h5 class="modal-title">Creative Pro Bundle – For Growing Brands</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body small">
-        <h6>Services:</h6>
-        <ul>
-          <li>✔ Complete Branding Kit (logo variations, typography, palette, icons)</li>
-          <li>✔ 20 Editable Social Media Templates</li>
-          <li>✔ 2 Infographics / Carousel Posts</li>
-          <li>✔ Facebook Page Branding (cover, profile, story highlights)</li>
-          <li>✔ 1 Short Video Edit (promo reel, story ad, or intro)</li>
-        </ul>
-        <h6>Freebies:</h6>
-        <ul>
-          <li>🎁 Digital Planner (monthly/weekly layout)</li>
-          <li>🎁 5 Bonus Templates</li>
-          <li>🎁 1 E-book (Productivity or Branding)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Ultimate Modal -->
-<div class="modal fade" id="ultimateModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
-      <div class="modal-header">
-        <h5 class="modal-title">Ultimate Bundle – All-in-One Kickstart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body small">
-        <h6>Services:</h6>
-        <ul>
-          <li>✔ Full Visual Identity Package (logo suite, brand guide, assets)</li>
-          <li>✔ 30 Social Media Templates + Content Posting Strategy</li>
-          <li>✔ 5 Infographics / Carousel Posts</li>
-          <li>✔ Facebook Page Branding (cover, highlights, pinned post design)</li>
-          <li>✔ 2 Short Video Edits (promo reels, story ads, product showcase)</li>
-          <li>✔ Digital Product Creation (planner, journal, or ebook)</li>
-        </ul>
-        <h6>Freebies:</h6>
-        <ul>
-          <li>🎁 Business Digital Pack (planner + tracker + content calendar)</li>
-          <li>🎁 2 E-books (Branding + Social Media Growth)</li>
-          <li>🎁 10 Extra Templates</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Freebies / Resources -->
-
-<!-- Services / Offers -->
-
-<!-- About the Brand -->
-
-<!-- SERVICES – “Why Choose Fia” -->
-<section id="services" class="section py-5 bg-white">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">
-        Why Choose <strong class="text-primary">Fia</strong>
-      </h2>
-      <span>Here’s why clients trust me to streamline systems, design web experiences, and bring automation to life.</span>
-    </div>
-
-    <div class="row align-items-center">
-      <!-- Left Column -->
-      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-        <div class="pb-sm-4 text-center text-sm-end">
-          <div class="mb-4">
-            <img src="assets/why fia/1.png" alt="Automation" class="rounded-circle" style="width:80px;">
-          </div>
-          <h4 class="sub-info">Built-for-you Automation</h4>
-          <p class="small-text mb-0">From lead capture to invoicing, I build automation that works with your rhythm—not against it.</p>
-        </div>
-        <div class="text-center text-sm-end">
-          <div class="mb-4">
-            <img src="assets/why fia/2.png" alt="Visual Design" class="rounded-circle" style="width:80px;">
-          </div>
-          <h4 class="sub-info">Thoughtful Design</h4>
-          <p class="small-text mb-0">Visuals that feel intentional — whether it’s branding, quick websites, or email templates.</p>
-        </div>
-      </div>
-
-      <!-- Center Image Column -->
-      <div class="col-lg-4 d-none d-lg-block text-center">
-        <div class="why-choose-center-image">
-          <img src="assets/Logo - Little Things By Fia .png" alt="Studio Work" class="rounded-circle" style="width:250px;">
-        </div>
-      </div>
-
-      <!-- Right Column -->
-      <div class="col-md-6 col-lg-4">
-        <div class="ps-md-4 text-center text-sm-start">
-          <div class="mb-4">
-            <img src="assets/why fia/5.png" alt="Web Design" class="rounded-circle" style="width:80px;">
-          </div>
-          <h4 class="sub-info">Website Design</h4>
-          <p class="small-text mb-0">From simple landing pages to full business sites, I design web experiences that are modern, responsive, and user-friendly.</p>
-        </div>
-        <div class="text-center text-sm-start mt-4">
-          <div class="mb-4">
-            <img src="assets/why fia/4.png" alt="QA & Workflow" class="rounded-circle" style="width:80px;">
-          </div>
-          <h4 class="sub-info">QA-first Workflows</h4>
-          <p class="small-text mb-0">All systems are tested and documented — so you're not just set up, you're set up smartly.</p>
-        </div>
-        <div class="text-center text-sm-start mt-4">
-          <div class="mb-4">
-            <img src="assets/why fia/3.png" alt="Support" class="rounded-circle" style="width:80px;">
-          </div>
-          <h4 class="sub-info">Support That Lasts</h4>
-          <p class="small-text mb-0">I don’t disappear after launch — I teach, refine, and support long after we go live.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials / Community -->
-<section id="testimonials" class="section testimonials py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">What Clients Say</h2>
-    
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner text-center">
-
-        <div class="carousel-item active">
-          <blockquote class="blockquote mx-auto" style="max-width: 700px;">
-            <p class="mb-4">“Before working with Fia, our sales follow-up took days. Now it’s instant — and we’ve doubled our booked calls.”</p>
-            <footer class="blockquote-footer">Maria R.</footer>
-          </blockquote>
-        </div>
-
-        <div class="carousel-item">
-          <blockquote class="blockquote mx-auto" style="max-width: 700px;">
-            <p class="mb-4">“She designed a brand kit that made my business look polished overnight.”</p>
-            <footer class="blockquote-footer">Lorenzo P.</footer>
-          </blockquote>
-        </div>
-
-        <div class="carousel-item">
-          <blockquote class="blockquote mx-auto" style="max-width: 700px;">
-            <p class="mb-4">“Fia turned my messy workflows into a system that saves me hours weekly.”</p>
-            <footer class="blockquote-footer">Ana S.</footer>
-          </blockquote>
-        </div>
-
-      </div>
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-  
-  <br><hr><br>
-  
-<!-- Testimonials / Community (2 Layers, 2 Cards Each, About-Card Style) -->
-<div class="container">
-  <h2 class="section-title text-center mb-5">Trusted By</h2>
-
-  <div class="row g-4 justify-content-center">
-    <!-- First Layer -->
-    <div class="col-lg-6 col-md-6">
-      <div class="about-card text-center">
-        <img src="assets/client-say/client-say.png" class="mx-auto d-block" style="width:100%; border-radius:16px;">
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-6">
-      <div class="about-card text-center">
-        <img src="assets/client-say/client-say (2).png" class="mx-auto d-block" style="width:100%; border-radius:16px;">
-      </div>
-    </div>
-
-    <!-- Second Layer -->
-    <div class="col-lg-6 col-md-6">
-      <div class="about-card text-center">
-        <img src="assets/client-say/client-say (3).png" class="mx-auto d-block" style="width:100%; border-radius:16px;">
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-6">
-      <div class="about-card text-center">
-        <img src="assets/client-say/client-say (6).png" class="mx-auto d-block" style="width:100%; border-radius:16px;">
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- Ask a Question -->
-<section class="bg-light">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="card card-style1 border-0">
-                            <div class="card-body p-4 p-md-5 p-xl-6">
-                                <div class="text-center mb-2-3 mb-lg-6">
-                                    <span class="section-title text-primary">FAQ's</span>
-                                    <h2 class="h1 mb-0 text-secondary">Frequently Asked Questions</h2>
-                                </div>
-                                <div id="accordion" class="accordion-style">
-                                    <div class="card mb-3">
-                                        <div class="card-header" id="headingOne">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="text-theme-secondary me-2">Q.</span> Can I book online?</button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                                            <div class="card-body">
-                                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-3">
-                                        <div class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="text-theme-secondary me-2">Q.</span> How would I plan a golf trip for my gathering?</button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                                            <div class="card-body">
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-3">
-                                        <div class="card-header" id="headingThree">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="text-theme-secondary me-2">Q.</span> What is the dress code?</button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
-                                            <div class="card-body">
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-3">
-                                        <div class="card-header" id="headingFour">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span class="text-theme-secondary me-2">Q.</span> What are the odds of making a double eagle?</button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
-                                            <div class="card-body">
-                                                course usually has its golf cart rules on its scorecard or posted in the clubhouse or near the first tee, so be sure to check those out but don’t sweat it! The fact that you are getting some exercise, and hanging out with some good friends!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingFive">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><span class="text-theme-secondary me-2">Q.</span> If I need to drop my round would i be able to get a discount?</button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
-                                            <div class="card-body">
-                                                It was popularised in the with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
- <!-- CONTACT simple-->
-<!-- <section id="contact" class="py-5" style="background: url('assets/shell royal blue.png') no-repeat center center/cover; position: relative;">
-  <div class="container d-flex justify-content-center">
-    <div class="card shadow-lg text-center p-4" style="max-width: 500px;">
-      <div class="card-body">
-        <h2 class="card-title mb-3">Contact Me</h2>
-        <p class="card-text mb-4">
-          Have a project in mind or just want to connect?<br>
-          I’d love to hear from you.
-        </p>
-        <div class="d-grid gap-3">
-          <a href="https://m.me/littlethingsbyfia" target="_blank" class="btn btn-primary">
-            <i class="bi bi-messenger me-2"></i> Message Me on Facebook
-          </a>
-          <a href="mailto:sofiabaltazar.working@gmail.com" class="btn btn-secondary">
-            <i class="bi bi-envelope-fill me-2"></i> Send an Email
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>-->
-
-<!-- CONTACT with form-->
-<section id="contact" class="section bg-theme-color-light overlay-dark overlay-opacity-8 bg-cover lazy" 
-     data-loaded="true" 
-     style="background-image: url(https://bootdey.com/img/Content/bg1.jpg);">
-
-  <div class="container"> 
-    <div class="row text-center-md text-center-xs d-middle justify-content-start">
-      
-      <!-- Left Side (Title / Intro) -->
-      <div class="col-12 col-lg-6 mb-5 text-white aos-init aos-animate" 
-           data-aos="fade-in" data-aos-delay="0" data-aos-offset="0">
-
-        <h1 class="display-4 fw-bold mb-3">
-          <span class="d-inline-block">
-            <span class="h6 fw-normal d-block text-align-end text-center-xs">
-              Little Things by Fia
-            </span>
-            <span class="text-danger">Creative Services & Digital Products</span>
-          </span>
-        </h1>
-
-        <p class="h4 fw-normal mb-0">
-          Let’s bring your ideas to life — simple, affordable, Filipino-inspired.
-        </p>
-
-      </div>
-
-      <!-- Right Side (ClickUp Form Embed) -->
-      <div class="col-12 col-lg-6 text-align-end text-center-md text-center-xs aos-init aos-animate" 
-           data-aos="fade-in" data-aos-delay="50" data-aos-offset="0">
-
-        <div class="d-inline-block bg-white shadow-primary-xs rounded p-4 p-md-5 w-100 max-w-450 text-align-start">
-          <h2 class="h5 mb-4">
-            <i class="fas fa-edit"></i> 
-            <span class="d-inline-block px-2">Project Inquiry</span>
-          </h2>
-
-          <!-- ClickUp Form -->
-          <iframe src="https://forms.clickup.com/90161230770/f/2kz0ecxj-196/F4F0FSN94LISKL7Z02" 
-                  width="100%" height="500" frameborder="0" style="border-radius:8px;">
-            Loading…
-          </iframe>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <!-- FOOTER -->
 <footer class="bg-dark-gradient footer">
   <div class="footer-top">
